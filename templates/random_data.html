@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Random Data</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data %}
+        <tr>
+          <td>Item {{ loop.index }}</td>
+          <td>{{ row }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p>Seed used: {{ seed }}</p>
+{% endblock %}
